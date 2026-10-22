@@ -9,13 +9,11 @@ const dns = require('dns')
 const productRouter = require('./routes/product')
 const userRouter = require('./routes/user')
 console.log(process.env.DB_PASSWORD)
-const index = fs.readFileSync('index.html', 'utf-8')
+const index = fs.readFileSync((__dirname, 'build', 'index.html'), 'utf-8')
 
 dns.setServers([
   '1.1.1.1',
   '8.8.8.8'
-
-
 ])
 
 
